@@ -1,5 +1,7 @@
 # Cisco DHCP Snooping
 
+![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/7fb50428-7a5d-4026-abc1-e8b30b6f62aa)
+
 
 ## DHCP Snooping Nedir?
 
@@ -9,9 +11,9 @@ Network tasarımımızda 2 bilgisayar, 1 switch, 2 DHCP Server bulunmaktadır. D
 
 
 
+### DHCP Server Config
 
-
-
+DHCP Server(Bize ait olan)
 
 ```
 Pool Name   Default Gateway  DNS Server   Start IP Address  Subnet Mask     Max User  TFTP Server  WLC Address
@@ -19,15 +21,38 @@ serverPool   192.168.1.1      8.8.8.8       192.168.1.2    255.255.255.0      25
 ```
 
 
+Saldırgan DHCP Server
+
+```
+Pool Name   Default Gateway  DNS Server   Start IP Address  Subnet Mask     Max User  TFTP Server  WLC Address
+serverPool   192.168.2.1      8.8.8.8       192.168.2.2    255.255.255.0      254       0.0.0.0      0.0.0.0
+```
+
+
+Bu yapılandırmayı yaptıktan sonra bilgisayarlara gelip IP ayarlarını Static'ten DHCP'ye çektiğinizde **192.168.2.1**  bloğundan IP almaya başlayacaktır. Bunu önlemek için DHCP Snooping yapacağız.
 
 
 
+Bağlamış olduğumuz switche gelip ayarları yapalım
+
+### Switch DHCP Snooping
+
+```
+Switch(config)#interface gigabitEthernet 0/1
+Switch(config-if)#ip dhcp snooping trust 
+Switch(config-if)#ip arp inspection trust 
+Switch(config-if)#exit 
+Switch(config)#interface gigabitEthernet 0/2
+Switch(config)#interface gigabitEthernet 0/2
+Switch(config-if)#ip dhcp snooping trust 
+Switch(config-if)#ip arp inspection trust 
+Switch(config-if)#exit 
+```
+
+Şimdi IP ayarlarını DHCP'ye çektiğinizde her zaman **192.168.1.1** bloğundan IP aldığını göreceksiniz.
 
 
 
-
-
-![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/7fb50428-7a5d-4026-abc1-e8b30b6f62aa)
 
 
 
