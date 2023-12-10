@@ -1,8 +1,5 @@
 # Cisco DHCP Snooping
 
-![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/310e9aa2-9e7b-4907-9abb-532ca393ff97)
-
-
 ## DHCP Snooping Nedir?
 
 DHCP Snooping, bir ağdaki DHCP trafiğini güvenli bir şekilde yönetmek için kullanılan bir güvenlik özelliğidir. Temel amacı, güvenilmeyen DHCP sunucularından gelen isteklere karşı koruma sağlamaktır.
@@ -52,6 +49,7 @@ Switch(config-if)#exit
 Şimdi IP ayarlarını DHCP'ye çektiğinizde her zaman **192.168.1.1** bloğundan IP aldığını göreceksiniz.
 
 
+![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/310e9aa2-9e7b-4907-9abb-532ca393ff97)
 
 
 
