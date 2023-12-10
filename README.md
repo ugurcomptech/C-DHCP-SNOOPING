@@ -1,6 +1,6 @@
 # Cisco DHCP Snooping
 
-![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/7fb50428-7a5d-4026-abc1-e8b30b6f62aa)
+![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/310e9aa2-9e7b-4907-9abb-532ca393ff97)
 
 
 ## DHCP Snooping Nedir?
