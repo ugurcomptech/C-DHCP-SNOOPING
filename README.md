@@ -40,7 +40,6 @@ Switch(config-if)#ip dhcp snooping trust
 Switch(config-if)#ip arp inspection trust 
 Switch(config-if)#exit 
 Switch(config)#interface gigabitEthernet 0/2
-Switch(config)#interface gigabitEthernet 0/2
 Switch(config-if)#ip dhcp snooping trust 
 Switch(config-if)#ip arp inspection trust 
 Switch(config-if)#exit 
