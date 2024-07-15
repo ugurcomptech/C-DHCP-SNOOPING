@@ -51,6 +51,4 @@ Switch(config-if)#exit
 ![image](https://github.com/ugurcomptech/C-DHCP-SNOOPING/assets/133202238/310e9aa2-9e7b-4907-9abb-532ca393ff97)
 
 
-![image](https://github.com/user-attachments/assets/55182175-7f82-4c8d-9e26-7a64c2993d1c)
-
 
